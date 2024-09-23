@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Create a text file
-      run: echo "Hello, World!" > hello.txt
+      run: echo "Hello, world!" > hello.txt
 
     - name: Archive text file
       uses: actions/upload-artifact@v2
@@ -25,7 +25,7 @@ jobs:
 
      steps:
        - name: Download text file
-         uses: actions/download-artifact@v2
+         uses: actions/download-artifact@v4
          with:
            name: hello-artifact
            path: ./artifacts/hello.txt
